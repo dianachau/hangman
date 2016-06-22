@@ -12,7 +12,6 @@ var arrayOfWrongLetters = []
 
 
 
-
 var numSlots = randomWord.length
 
 var slot0 = false
