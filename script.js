@@ -2,7 +2,7 @@ var wordList = ["puzzled", "cat", "hardest", "bottles", "laptops", "tinfoil", "c
 "unknown", "planter", "message", "unicorn", "cup", "mouse", "tail", "ball", "noon"]
 var pickRandomWord = Math.floor(Math.random() * (wordList.length))
 var randomWord = wordList[pickRandomWord]
-console.log(randomWord)
+console.log('randomword', randomWord)
 
 var imageCount = 2
 
