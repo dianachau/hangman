@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title> Let's Play Hangman! </title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <meta property="og:url" content="http://dchau.netne.net/hangman/container.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hangman" />
+    <meta property="og:description" content="Let's Play Hangman" />
+    <meta property="og:image" content="images/stage9.png" />
+  </head>
+
+  <body>
+    <img id="image" src="images/stage1.png">
+    <br>
+    <table id="allSlots">
+      <tr>
+        <td id="slot0"> _ </td>
+        <td id="slot1"> _ </td>
+        <td id="slot2"> _ </td>
+        <td id="slot3"> _ </td>
+        <td id="slot4"> _ </td>
+        <td id="slot5"> _ </td>
+        <td id="slot6"> _ </td>
+        <td id="slot7"> _ </td>
+        <td id="slot8"> _ </td>
+        <td id="slot9"> _ </td>
+      </tr>
+    </table>
+  <br><br>
+  <p>
+    <button id="button" type="button" onClick="playGame()">Click here to guess a letter!</button>
+  </p>
+  <p id="result"> </p>
+  </body>
+</html>
