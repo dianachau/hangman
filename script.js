@@ -2,13 +2,41 @@ var wordList = ["puzzled", "cat", "hardest", "bottles", "laptops", "tinfoil", "c
 "unknown", "planter", "message", "unicorn", "cup", "mouse", "tail", "ball", "noon"]
 var pickRandomWord = Math.floor(Math.random() * (wordList.length))
 var randomWord = wordList[pickRandomWord]
-console.log(randomWord)
 
 var imageCount = 2
 
 var arrayOfWrongLetters = []
-// var allSlots = []
-// console.log(allSlots)
+
+window.onload = function () {
+  // document.getElementById('slot3').style.display = 'none'
+  $('button').disabled = true
+  $.get('http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=5&maxLength=15&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5',
+    {}, function(newWord) {
+
+    randomWord = newWord[0].word
+    $('button').disabled = false
+      console.log(newWord[0].word)
+    })
+
+    var A = document.getElementById("a")
+    var B = document.getElementById("b")
+    var C = document.getElementById("c")
+
+}
+
+
+
+
+function changeText() {
+  if (A.clicked === true) {
+  console.log("you have clicked A")
+  A = takeUserGuess
+  }
+
+  if (B){
+    console.log("you have clicked B")
+    B.innerHTML = "B".strike()
+  }
 
 
 
@@ -24,6 +52,7 @@ var slot6 = false
 var slot7 = false
 var slot8 = false
 var slot9 = false
+
 
 var playGame = function () {
   var takeUserGuess = prompt("Guess a letter!").toUpperCase()
@@ -108,57 +137,64 @@ var playGame = function () {
   if (imageCount > 9) {
     var gameStatus = document.getElementById("result")
     gameStatus.innerHTML = "game over"
+    exitGame()
   }
 
   if (numSlots === 2 && (slot0 && slot1)) {
     var gameStatus = document.getElementById("result")
     gameStatus.innerHTML = "you win!"
+    exitGame()
   }
 
   if (numSlots === 3 && (slot0 && slot1 && slot2)) {
     var gameStatus = document.getElementById("result")
     gameStatus.innerHTML = "you win!"
+    exitGame()
   }
 
   if (numSlots === 4 && (slot0 && slot1 && slot2 && slot3)) {
     var gameStatus = document.getElementById("result")
     gameStatus.innerHTML = "you win!"
+    exitGame()
   }
 
   if (numSlots === 5 && (slot0 && slot1 && slot2 && slot3 && slot4)) {
     var gameStatus = document.getElementById("result")
     gameStatus.innerHTML = "you win!"
+    exitGame()
   }
 
   if (numSlots === 6 && (slot0 && slot1 && slot2 && slot3 && slot4 && slot5)) {
     var gameStatus = document.getElementById("result")
     gameStatus.innerHTML = "you win!"
+    exitGame()
   }
 
   if (numSlots === 7 && (slot0 && slot1 && slot2 && slot3 && slot4 && slot5 &&
   slot6)) {
     var gameStatus = document.getElementById("result")
     gameStatus.innerHTML = "you win!"
+    exitGame()
   }
 
   if (numSlots === 8 && (slot0 && slot1 && slot2 && slot3 && slot4 && slot5 &&
   slot6 && slot7)) {
     var gameStatus = document.getElementById("result")
     gameStatus.innerHTML = "you win!"
+    exitGame()
   }
 
   if (numSlots === 9 && (slot0 && slot1 && slot2 && slot3 && slot4 && slot5 &&
   slot6 && slot7 && slot8)) {
     var gameStatus = document.getElementById("result")
     gameStatus.innerHTML = "you win!"
+    exitGame()
   }
 
 console.log(arrayOfWrongLetters)
 }
 
-// function exitGame() {
-//   var disableButton = document.getElementById("button")
-//   disableButton.disable = true
-//
-//
-// }
+function exitGame() {
+  var disableButton = document.getElementById("button")
+  disableButton.disabled = true
+}

@@ -1,5 +1,13 @@
 #allSlots {
   font-family:sans-serif;
   font-size: 50px;
-  
 }
+
+#alphabet {
+  font-family: sans-serif;
+  font-size: 50px;
+}
+
+/*#slot9, #slot8 {
+  display: none;
+}*/
