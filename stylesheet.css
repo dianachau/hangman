@@ -8,6 +8,27 @@
   font-size: 50px;
 }
 
-/*#slot9, #slot8 {
-  display: none;
-}*/
+p {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+#alphabet td:hover {
+  transition: color .5s ease;
+  color: red;
+}
+
+#allSlots td:hover {
+  color: green;
+}
+
+input[type=text] {
+    width: 60%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 20px;

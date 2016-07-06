@@ -13,7 +13,7 @@
 
   <body>
     <img id="image" src="images/stage1.png">
-    <br>
+    <p id="wordLength"> The word contains 0 letters </p>
     <table id="allSlots">
       <tr>
         <td id="slot0"> _ </td>
@@ -26,46 +26,49 @@
         <td id="slot7"> _ </td>
         <td id="slot8"> _ </td>
         <td id="slot9"> _ </td>
+        <td id="slot10"> _ </td>
       </tr>
     </table>
+    <br>
     <table id="alphabet">
       <tr>
-        <button id="a" type="button" onClick="changeText()"> A </button>
-        <td id="b" onclick="changeText()"> B </td>
-        <td id="c" onclick="changeText()"> C </td>
-        <td id="d" onclick="changeText()"> D </td>
-        <td id="e" onclick="changeText()"> E </td>
-        <td id="f" onclick="changeText()"> F </td>
-        <td id="g" onclick="changeText()"> G </td>
-        <td id="h" onclick="changeText()"> H </td>
-        <td id="i" onclick="changeText()"> I </td>
+        <td id="a" onclick="changeText('a')"> A </td>
+        <td id="b" onclick="changeText('b')"> B </td>
+        <td id="c" onclick="changeText('c')"> C </td>
+        <td id="d" onclick="changeText('d')"> D </td>
+        <td id="e" onclick="changeText('e')"> E </td>
+        <td id="f" onclick="changeText('f')"> F </td>
+        <td id="g" onclick="changeText('g')"> G </td>
+        <td id="h" onclick="changeText('h')"> H </td>
+        <td id="i" onclick="changeText('i')"> I </td>
       </tr>
       <tr>
-        <td id="j" onclick="changeText()"> J </td>
-        <td id="k" onclick="changeText()"> K </td>
-        <td id="l" onclick="changeText()"> L </td>
-        <td id="m" onclick="changeText()"> M </td>
-        <td id="n" onclick="changeText()"> N </td>
-        <td id="o" onclick="changeText()"> O </td>
-        <td id="p" onclick="changeText()"> P </td>
-        <td id="q" onclick="changeText()"> Q </td>
-        <td id="r" onclick="changeText()"> R </td>
+        <td id="j" onclick="changeText('j')"> J </td>
+        <td id="k" onclick="changeText('k')"> K </td>
+        <td id="l" onclick="changeText('l')"> L </td>
+        <td id="m" onclick="changeText('m')"> M </td>
+        <td id="n" onclick="changeText('n')"> N </td>
+        <td id="o" onclick="changeText('o')"> O </td>
+        <td id="p" onclick="changeText('p')"> P </td>
+        <td id="q" onclick="changeText('q')"> Q </td>
+        <td id="r" onclick="changeText('r')"> R </td>
       </tr>
       <tr>
-        <td id="s" onclick="changeText()"> S </td>
-        <td id="t" onclick="changeText()"> T </td>
-        <td id="u" onclick="changeText()"> U </td>
-        <td id="v" onclick="changeText()"> V </td>
-        <td id="w" onclick="changeText()"> W </td>
-        <td id="x" onclick="changeText()"> X </td>
-        <td id="y" onclick="changeText()"> Y </td>
-        <td id="z" onclick="changeText()"> Z </td>
+        <td id="s" onclick="changeText('s')"> S </td>
+        <td id="t" onclick="changeText('t')"> T </td>
+        <td id="u" onclick="changeText('u')"> U </td>
+        <td id="v" onclick="changeText('v')"> V </td>
+        <td id="w" onclick="changeText('w')"> W </td>
+        <td id="x" onclick="changeText('x')"> X </td>
+        <td id="y" onclick="changeText('y')"> Y </td>
+        <td id="z" onclick="changeText('z')"> Z </td>
       </tr>
     </table>
-  <br><br>
-  <p>
-    <button id="button" type="button" onClick="playGame()">Click here to guess a letter!</button>
-  </p>
+  <form>
+    <input id="textbox" type="text" autofocus="autofocus" maxlength=1
+    placeholder="Enter a letter" onkeypress="inputText()"> </input> <br><br>
+    <input type="submit" value="Submit"> <br>
+  </form>
   <p id="result"> </p>
   </body>
 </html>
